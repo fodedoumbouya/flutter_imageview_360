@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
 }
 
 class DemoPage extends StatefulWidget {
-  DemoPage({Key key, this.title}) : super(key: key);
+  DemoPage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -61,8 +61,8 @@ class _DemoPageState extends State<DemoPage> {
                     ? ImageView360(
                         key: UniqueKey(),
                         imageList: imageList,
-                        autoRotate: autoRotate,
-                        rotationCount: rotationCount,
+                        autoRotate: false,
+                        rotationCount: 40,
                         rotationDirection: RotationDirection.anticlockwise,
                         frameChangeDuration: Duration(milliseconds: 30),
                         swipeSensitivity: swipeSensitivity,
